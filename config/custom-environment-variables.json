@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey": "estacionamento_jwtPrivateKey",
+    "db": "estacionamento-api_db"
+}
