@@ -1,21 +1,22 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 
-//customer Schema
-const customerSchema = new mongoose.Schema({
+//car Schema
+const carSchema = new mongoose.Schema({
     name:{
         type: String,
         required: true,
+        trim: true,
         minlength: 5, 
         maxlength: 50,
     },
-    phone:{
+    year:{
         type: Number,
         required:true,
         minlength: 8,
         maxlength: 30,
     },
-    address:{
+    licensePlate:{
         type: String,
         required: true,
         minlength: 0,
@@ -24,20 +25,20 @@ const customerSchema = new mongoose.Schema({
 });
 
 //Atribuicao da model a uma variavel
-const Customers = mongoose.model('Customer', customerSchema);
+const Car = mongoose.model('Car', carSchema);
 
 //Validacao Joi    
-function customerValidate(customer){
+function carValidate(car){
     const schema = {
         name: Joi.string().min(5).max(50).required(),
-        phone: Joi.number().min(8).required(),
-        address: Joi.string().min(0).max(255).required(),
+        year: Joi.number().min(8).required(),
+        licensePlate: Joi.string().min(0).max(255).required(),
     }
-        return Joi.validate(customer, schema);
+        return Joi.validate(car, schema);
 };
 
-//Export CustomerSchema
-exports.Customers = Customers;
-exports.customerSchema = customerSchema;
-exports.validate = customerValidate;
+//Export CarrSchema
+exports.Car = Car;
+exports.carSchema = carSchema;
+exports.validate = carValidate;
 
