@@ -3,6 +3,12 @@ const Joi = require('joi');
 
 //Schema do numero de vagas disponiveis no estacionamento
 const numbersOfPlacesSchema = new mongoose.Schema({
+    name:{
+        type: String,
+        required:true,
+        min:1,
+        max:255,
+    },
     spots:{
         type: Number,
         required: true,

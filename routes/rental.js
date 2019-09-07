@@ -38,6 +38,7 @@ router.post('/', async (req, res) => {
         },
         numbersOfPlaces:{
             _id: numbersOfPlaces._id,
+            name: numbersOfPlaces.name,
         }
     });
     
