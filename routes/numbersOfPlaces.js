@@ -23,7 +23,6 @@ router.get('/', async (req, res) => {
     res.send(places);
  });
 
-
 //PUT
 router.put('/:id', async (req,res) => {
     const places = await Places.findByIdAndUpdate(req.params.id,{
