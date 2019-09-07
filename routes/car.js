@@ -9,8 +9,8 @@ router.post('/', async (req, res) => {
 
     const car = new Car({
         name: req.body.name,
-        phone: req.body.phone,
-        address: req.body.address,
+        year: req.body.year,
+        licensePlate: req.body.licensePlate,
     });
     await car.save();
     res.send(car);
