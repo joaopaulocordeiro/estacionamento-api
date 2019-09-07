@@ -23,6 +23,7 @@ const numbersOfPlaces = mongoose.model('NumberOfPlaces', numbersOfPlacesSchema);
 //Validacao Joi 
 function validatePlaces(places){
     const schema = {
+        name: Joi.string().min(1).max(255).required(),
         spots: Joi.number().min(0).max(255).required()
     }
     return Joi.validate(places, schema);

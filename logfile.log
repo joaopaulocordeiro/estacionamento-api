@@ -243,3 +243,7 @@
 {"level":"info","message":"listening on port 3000...","timestamp":"2019-09-07T21:25:09.202Z"}
 {"level":"info","message":"listening on port 3000...","timestamp":"2019-09-07T21:25:13.807Z"}
 {"level":"info","message":"Connected to mongodb://localhost/estacionamento-api...","timestamp":"2019-09-07T21:25:15.859Z"}
+{"level":"info","message":"listening on port 3000...","timestamp":"2019-09-07T21:54:45.368Z"}
+{"level":"info","message":"Connected to mongodb://localhost/estacionamento-api...","timestamp":"2019-09-07T21:54:47.409Z"}
+{"level":"info","message":"listening on port 3000...","timestamp":"2019-09-07T21:55:40.324Z"}
+{"level":"info","message":"Connected to mongodb://localhost/estacionamento-api...","timestamp":"2019-09-07T21:55:42.350Z"}
