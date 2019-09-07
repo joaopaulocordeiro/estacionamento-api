@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Places, validate } = require('../models/numbersOfPlaces');
+const { NumbersOfPlaces, validate } = require('../models/numbersOfPlaces');
 
 
 //POST quantidade de vagas disponiveis
@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
     const {error} = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
-    const places = new Places ({
+    const places = new NumbersOfPlaces ({
         name: req.body.name,
         spots: req.body.spots
     });
@@ -20,13 +20,13 @@ router.post('/', async (req, res) => {
 
 //GET
 router.get('/', async (req, res) => {
-    const places = await Places.find().sort('spots')
+    const places = await NumbersOfPlaces.find().sort('spots')
     res.send(places);
  });
 
 //PUT
 router.put('/:id', async (req,res) => {
-    const places = await Places.findByIdAndUpdate(req.params.id,{
+    const places = await NumbersOfPlaces.findByIdAndUpdate(req.params.id,{
         spot: req.body.spot
     }, {new: true})
 
